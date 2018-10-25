@@ -1,0 +1,8 @@
+{
+  "name": "info-query",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
