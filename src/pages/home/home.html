@@ -30,7 +30,7 @@
 
   <ion-list>
 
-    <button ion-button color="secondary" (click)="submit()">提交查询</button>
+    <button ion-button [disabled]='count < 20' color="secondary" (click)="submit()">提交查询</button>
     <button ion-button color="secondary" (click)="getCount()">查询剩余次数</button>
 
   </ion-list>

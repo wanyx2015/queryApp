@@ -27,7 +27,7 @@ export class HomePage {
   user;
 
   constructor(public navCtrl: NavController, private http: HTTP) {
-    this.count = localStorage.getItem('count');
+    this.getCount()
   }
 
   getCount() {
@@ -104,7 +104,9 @@ export class HomePage {
         console.log(data2.message);
         alert(data2.message + " " + data1.count)
 
-        this.count = localStorage.getItem('count');
+        this.getCount()
+
+        // this.count = localStorage.getItem('count');
 
 
         // let result = JSON.stringify(JSON.parse(data.data)).replace(/\\/g, '');
