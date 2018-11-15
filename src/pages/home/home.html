@@ -30,13 +30,15 @@
 
   <ion-list>
 
-    <button ion-button color="secondary" (click)="submit()">查询</button>
+    <button ion-button color="secondary" (click)="submit()">提交查询</button>
+    <button ion-button color="secondary" (click)="getCount()">查询剩余次数</button>
 
   </ion-list>
 
 
   <ion-content>
-  剩余查询次数：  {{count}}
+    <p>当前用户：{{user}}</p>
+    <p> 剩余查询次数： {{count}}</p>
   </ion-content>
 
 
