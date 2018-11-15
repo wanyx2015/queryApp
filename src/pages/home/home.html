@@ -1,17 +1,43 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>三要素查询</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <!-- <h2>三要素查询</h2> -->
+  <ion-list no-lines>
+
+    <ion-item>
+      <ion-label stacked>姓名</ion-label>
+      <ion-input type="text" [(ngModel)]="name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>手机号</ion-label>
+      <ion-input type="text" [(ngModel)]="mobile"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>身份证号码</ion-label>
+      <ion-input type="text" [(ngModel)]="id"></ion-input>
+    </ion-item>
+
+    <!-- <ion-item> -->
+    <!-- </ion-item> -->
+
+  </ion-list>
+
+  <ion-list>
+
+    <button ion-button color="secondary" (click)="submit()">查询</button>
+
+  </ion-list>
+
+
+  <ion-content>
+  剩余查询次数：  {{count}}
+  </ion-content>
+
+
 </ion-content>
