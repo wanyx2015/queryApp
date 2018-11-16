@@ -42,7 +42,7 @@ export class LoginPage {
             password: this.password
         }
 
-        this.http.post('http://10.0.0.2:5000/auth/login', body, {})
+        this.http.post('http://121.199.20.195:81/auth/login', body, {})
             .then(data => {
 
                 // let result = JSON.parse(data.data);
