@@ -27,7 +27,7 @@ export class HomePage {
   user;
 
   constructor(public navCtrl: NavController, private http: HTTP) {
-    this.getCount()
+    // this.getCount()
   }
 
   getCount() {
@@ -130,7 +130,7 @@ export class HomePage {
         console.log(message);
         // alert(data2.message + " " + data1.count)
 
-        this.getCount()
+        // this.getCount()
 
         // this.count = localStorage.getItem('count');
 

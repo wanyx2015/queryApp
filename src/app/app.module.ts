@@ -1,5 +1,7 @@
+import { LocationPage } from './../pages/location/location';
+import { PersonalInvPage } from './../pages/personal-inv/personal-inv';
 // import { HttpClient, HttpHandler } from '@angular/common/http';
-import { HttpClientModule,HttpClient, HttpHandler  } from '@angular/common/http';
+import { HttpClientModule, HttpClient, HttpHandler } from '@angular/common/http';
 
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -29,6 +31,8 @@ export function tokenGetter() {
     AboutPage,
     ContactPage,
     HomePage,
+    PersonalInvPage,
+    LocationPage,
     TabsPage
   ],
   imports: [
@@ -49,6 +53,8 @@ export function tokenGetter() {
     AboutPage,
     ContactPage,
     HomePage,
+    PersonalInvPage,
+    LocationPage,
     TabsPage
   ],
   providers: [

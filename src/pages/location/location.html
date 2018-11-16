@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>当前停留城市验证（电信/移动/联通）</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <!-- <h2>三要素查询</h2> -->
+  <ion-list no-lines>
+
+    <ion-item>
+      <ion-label stacked>手机号码</ion-label>
+      <ion-input type="text" [(ngModel)]="mobile"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>城市</ion-label>
+
+
+      <ion-select [(ngModel)]="city" multiple="false">
+        <ion-option *ngFor="let x of cities"  [value]="x.value">{{x.display}}</ion-option>
+      </ion-select>
+
+
+      <!-- <select id='contactype' class="form-control" name="contactType" [(ngModel)]="contactType" #ag="ngModel" required>
+        <option *ngFor="let x of contactOptions" [value]="x.value"> {{x.display}} </option>
+      </select> -->
+
+      <!-- <ion-input type="text" [(ngModel)]="id"></ion-input> -->
+    </ion-item>
+
+  </ion-list>
+
+  <ion-list>
+
+    <button ion-button [disabled]='count <= 0' color="secondary" (click)="submit()">提交查询</button>
+    <button ion-button color="secondary" (click)="getCount()">查询剩余次数</button>
+
+  </ion-list>
+
+
+  <ion-content>
+    <p>当前用户：{{user}}</p>
+    <p> 剩余查询次数： {{count}}</p>
+  </ion-content>
+
+
+</ion-content>

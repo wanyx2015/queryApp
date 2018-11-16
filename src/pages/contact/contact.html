@@ -1,17 +1,38 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Contact
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
-</ion-content>
+    <ion-navbar>
+      <ion-title>最高学历查询</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <!-- <h2>三要素查询</h2> -->
+    <ion-list no-lines>
+  
+      <ion-item>
+        <ion-label stacked>姓名</ion-label>
+        <ion-input type="text" [(ngModel)]="name"></ion-input>
+      </ion-item>
+  
+      <ion-item>
+        <ion-label stacked>身份证号码</ion-label>
+        <ion-input type="text" [(ngModel)]="id"></ion-input>
+      </ion-item>
+  
+    </ion-list>
+  
+    <ion-list>
+  
+      <button ion-button [disabled]='count <= 0' color="secondary" (click)="submit()">提交查询</button>
+      <button ion-button color="secondary" (click)="getCount()">查询剩余次数</button>
+  
+    </ion-list>
+  
+  
+    <ion-content>
+      <p>当前用户：{{user}}</p>
+      <p> 剩余查询次数： {{count}}</p>
+    </ion-content>
+  
+  
+  </ion-content>
+  

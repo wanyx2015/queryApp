@@ -24,8 +24,10 @@ const helper = new JwtHelperService();
 })
 export class LoginPage {
 
-    username = 'user1';
-    password = 'password1';
+    // username = 'user1';
+    // password = 'password1';
+    username;
+    password;
 
     user;
     count;
